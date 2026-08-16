@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 · t2-weekly-massagelab-yeouido</title>
+  <meta name="description" content="t2-weekly-massagelab-yeouido에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://weekly.massagelab-yeouido.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+        /* CSS Variables & Design System */
+        :root {
+            --bg-primary: #0A0A0C;
+            --bg-secondary: #121215;
+            --bg-tertiary: #1A1A1E;
+            --accent: #CCFF00; /* Toxic neon yellow/green for Transparent Ledger concept */
+            --accent-hover: #b3df00;
+            --text-main: #FFFFFF;
+            --text-muted: #8E8E93;
+            --border-color: #2C2C30;
+            --border-heavy: #CCFF00;
+            --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+        .m-ico-bhgp-text {
+            font-family: var(--font-sans);
+            font-weight: 900;
+            font-size: 1.25rem;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header & Navigation */
+        .q-head-3jc1 {
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(10, 10, 12, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+        .q-head-3jc1 .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .t-btn-ybi1-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .t-btn-ybi1-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .t-btn-ybi1-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .t-btn-ybi1-links a:hover,
+        .t-btn-ybi1-links a.active {
+            color: var(--accent);
+        }
+
+        /* Mobile Hamburger Menu */
+        .q-ico-2i7f {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+        .q-ico-2i7f span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-main);
+            position: absolute;
+            left: 0;
+            transition: var(--transition);
+        }
+        .q-ico-2i7f span:nth-child(1) { top: 6px; }
+        .q-ico-2i7f span:nth-child(2) { top: 14px; }
+        .q-ico-2i7f span:nth-child(3) { top: 22px; }
+
+        .q-ico-2i7f.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .q-ico-2i7f.open span:nth-child(2) { opacity: 0; }
+        .q-ico-2i7f.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        /* Hero Section - Edgy Brutalist Tone */
+        .hero-section {
+            padding: 8rem 0 5rem 0;
+            border-bottom: 2px solid var(--border-heavy);
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+        }
+        .hero-section::before {
+            content: "LEDGER";
+            position: absolute;
+            right: -5%;
+            bottom: -5%;
+            font-size: 15vw;
+            font-weight: 900;
+            color: rgba(204, 255, 0, 0.02);
+            pointer-events: none;
+            line-height: 1;
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .hero-title span {
+            color: var(--accent);
+            display: block;
+        }
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        /* Ledger Style Content Block */
+        .ledger-block {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .ledger-header {
+            position: sticky;
+            top: 100px;
+        }
+        .ledger-tag {
+            background-color: var(--accent);
+            color: var(--bg-primary);
+            font-size: 0.8rem;
+            font-weight: 900;
+            padding: 0.25rem 0.5rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .ledger-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .ledger-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .ledger-content strong {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Manifesto Grid */
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .manifesto-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            transition: var(--transition);
+        }
+        .manifesto-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        .manifesto-num {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .manifesto-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .manifesto-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Verification Protocol Table */
+        .protocol-section {
+            padding: 6rem 0;
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .protocol-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 3rem;
+            text-align: left;
+        }
+        .protocol-table th {
+            border-bottom: 2px solid var(--border-heavy);
+            padding: 1.5rem 1rem;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .protocol-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 1rem;
+            font-size: 1rem;
+            vertical-align: top;
+        }
+        .protocol-table tr:hover td {
+            background-color: rgba(204, 255, 0, 0.02);
+        }
+        .protocol-badge {
+            display: inline-block;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            padding: 0.15rem 0.4rem;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        .q-foot-3ns2 {
+            border-top: 2px solid var(--border-heavy);
+            background-color: var(--bg-primary);
+            padding: 4rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .q-foot-3ns2-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .q-foot-3ns2-brand p {
+            margin-top: 1rem;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+        .q-foot-3ns2-links h5 {
+            color: var(--text-main);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .q-foot-3ns2-links ul {
+            list-style: none;
+        }
+        .q-foot-3ns2-links ul li {
+            margin-bottom: 0.75rem;
+        }
+        .q-foot-3ns2-links ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .q-foot-3ns2-links ul li a:hover {
+            color: var(--accent);
+        }
+        .q-foot-3ns2-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Responsive-768 */
+        @media (max-width: 768px) {
+            .q-ico-2i7f {
+                display: block;
+            }
+            .t-btn-ybi1-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-secondary);
+                border-bottom: 1px solid var(--border-color);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+            .t-btn-ybi1-links.open {
+                display: flex;
+            }
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .ledger-header {
+                position: relative;
+                top: 0;
+            }
+            .manifesto-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .q-foot-3ns2-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .q-foot-3ns2-bottom {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            .protocol-table th, .protocol-table td {
+                padding: 1rem 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+  <meta property="og:title" content="글 목록 · t2-weekly-massagelab-yeouido">
+  <meta property="og:description" content="t2-weekly-massagelab-yeouido에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://weekly.massagelab-yeouido.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="q-head-3jc1">
+        <div class="container">
+            <a href="/" class="m-ico-bhgp-text">
+                LEDGER LAB
+            </a>
+            <nav class="t-btn-ybi1-wrapper">
+                <ul class="t-btn-ybi1-links" id="nav-links">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about" class="active">소개</a></li>
+                    <li><a href="/warnings">주의사항</a></li>
+                    <li><a href="/guide">업종별 가이드</a></li>
+                </ul>
+                <button class="q-ico-2i7f" id="menu-toggle" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 15개</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-3ns7fl.html">2억 원짜리 권리금 명세서에 숨겨진 그들만의 마진 방정식</a>
+        <p class="post-item__summary">룸 단위 서비스업에서 권리금 2억 원을 쿨하게 던지고 나간 전 점주의 실거래 내역서를 보고 있자니, 웃음밖에 안 나오더군요. 다들 매출 규모만 보지, 정작 그 매출이 어떤 원가 구조로 쪼개지는지는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-dc24ia.html">유흥 이용 주의사항 현장에서 확인한 선택 기준과 주의점</a>
+        <p class="post-item__summary">서울 등 주요 도심 지역에서 유흥 시설을 이용할 때는 사전에 명확한 기준을 세우고 현장 상태를 꼼꼼히 확인하는 것이 중요합니다. 시설을 선택할 때는 해당 업소가 정식 영업 허가를 받아 안전하게 운영</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-15a82yy.html">월 3000 찍고도 망하는게 홍대입니다; 제가 6개월만에 접은 이유가 이겁니다</a>
+        <p class="post-item__summary">내 가게 홍대 상권 월 매출 3200만원. 근데 6개월 만에 접었다. 인건비 1400, 재료비 900, 월세+관리비 700. 계산기 두드리면 3200 - 3000 = 200. 거기서 카드 수수료, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-ky90i0.html">정보 블로그 해결 방법 총정리</a>
+        <p class="post-item__summary">안녕하세요! 어떤 작업이나 프로젝트를 도와드릴까요? 무엇이든 지시해 주시면 맞춰서 진행하겠습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-ok7grj.html">룸 단위 서비스업의 보이지 않는 독, 마진율의 함정을 파헤치다</a>
+        <p class="post-item__summary">영수증 찍힌 월 매출 3,000만 원은 달콤한 마약이었지. 2022년 강남 일대에서 룸 서비스업에 손을 댔을 때, 나는 내가 꽤나 똑똑한 사업가인 줄 알았어. 하지만 현실은 6개월 만에 보증금까지 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-2w441.html">진짜 정보는 싱글 프레임에 있다</a>
+        <p class="post-item__summary">난 처음에 내 눈을 의심했다. 브래드 피트가 영화 시작 12분 만에 1프레임 깜빡이고 사라진 걸 보고, DVD 프레스 오류인 줄 알았다. 네, 파이트 클럽에서 타일러 더든이 처음 등장하기 전에 총 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-7q0w5x.html">형님들, 유흥 즐길 때 신발부터 보는 이유 아시죠? 아식스 VS 뉴발란스로 따지는 업소 골라내는 법</a>
+        <p class="post-item__summary">유흥업소 고르는데 신발 깔창을 확인하라고?이 소리 들으면 보통 &quot;뭐야 저 미친놈이&quot; 하겠지. 근데 진짜다. 나이키에서 15년, 아태지역 프로젝트 매니저로 보낸 시간이 헛소리 하라고 있는 게 아니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-14je3h4.html">유흥 이용 주의사항 vs 유흥 이용 주의사항 비교</a>
+        <p class="post-item__summary">서울 지역에서 유흥 시설을 이용할 때는 사전에 안전 수칙과 주의사항을 철저히 확인하는 것이 매우 중요합니다. 다양한 유흥 업종과 장소에 따라 점검해야 할 요소가 조금씩 달라지므로, 각 상황에 맞는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1m5cd6j.html">홍대 바닥에서 권리금 2억 챙겨 나간 사장님의 진짜 계산기</a>
+        <p class="post-item__summary">홍대 상권에서 망한 가게들은 대개 '인테리어에 3억 썼다'고 울상 짓지만, 사실 그게 바로 폐업의 시발점입니다. 2023년 말, 제가 직접 목격한 그 권리금 2억짜리 계약서의 이면을 들여다보면 답이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-1vsy3a5.html">유흥 이용 주의사항에 대한 통념과 실제 차이를 검토했다</a>
+        <p class="post-item__summary">서울 도심의 다양한 여가 및 유흥 시설을 이용할 때 많은 이들이 인터넷 커뮤니티나 주변의 구전 정보를 그대로 신뢰하곤 합니다. 그러나 시간이 지남에 따라 관련 법규와 운영 방식이 정비되면서 과거의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-upkl05.html">서울 유흥 업소 방문 시 명함 교환에 대한 고찰</a>
+        <p class="post-item__summary">서울 시내의 수많은 업소를 다니며 늘 느끼는 것이지만, 입구에서부터 건네받는 명함들은 사실 상당수가 일회성 정보에 불과합니다. 예의 바르고 현명하신 독자님들께서는 이미 알고 계시겠지만, 이런 작은 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-1qqugzg.html">강남 모임에서 말나는 그 카드: 룰 변호사가 정리한 비너스 확장 2인 밸런스 붕괴의 내막</a>
+        <p class="post-item__summary">지난주 목요일, 강남의 한 프라이빗 멤버십에서 테라포밍 마스를 돌렸다. 비즈니스 미팅 끝에 가볍게 하려다가 비너스 확장 꺼내는 순간 분위기가 싸해졌다. 문제는 역시나 그 카드—'비너스 동물군(Ven</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-1da8z01.html">언론이 놓친 NSA 슬라이드 7장</a>
+        <p class="post-item__summary">2013년 6월, 당신이 기자였다면 어느 슬라이드를 헤드라인으로 잡았을까? 2장의 로고가 박힌 시각적 충격? 아니면 7장의 기술적 운영 메뉴얼? 대부분은 당연히 2장을 선택해. 이 선택을 비난하진 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-1ik3h0m.html">유흥 이용 주의사항 관련 질문을 상황별로 정리해봤다</a>
+        <p class="post-item__summary">서울 지역의 유흥 업소를 방문하기 전에는 영업시간과 방문 예약 필요 여부를 미리 체크하는 것이 좋습니다. 특히 주말이나 야간 시간에는 인근 이동 동선과 교통편이 혼잡해질 수 있으므로 대중교통 이용 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-z9vpsv.html">홍대 힙스터 사장들이 2023년에 줄폐업한 진짜 이유, 내가 엑셀로 털어본 원가 분석과 유흥 이용 주의사항</a>
+        <p class="post-item__summary">2023년 10월의 어느 서늘한 목요일 밤, 당신은 홍대 삼거리포차 뒷골목에서 7만 원짜리 '수제' 모츠나베를 주문하면서 정말 그 가치를 믿었는가?</p>
+      </li>
+      </ul>
+
+    </main>
+  </div>
+</body>
+</html>

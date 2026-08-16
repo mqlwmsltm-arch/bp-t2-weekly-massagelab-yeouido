@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 분석 — 유흥 이용 주의사항 업종별 투명성 검증</title>
+    <meta name="description" content="유흥 이용 주의사항 정보를 투명하게 공개합니다. 서울 지역을 중심으로 셔츠룸, 룸싸롱, 마사지, 가라오케 등 12개 주요 업종의 예약 방식, 위생 상태, 가격 투명성 체크리스트를 철저히 비교 분석하여 올바른 소비 기준을 제시합니다.">
+    <meta name="keywords" content="유흥 이용 주의사항, 셔츠룸 주의사항, 룸싸롱 예약, 마사지 위생, 가라오케 가격">
+    <link rel="canonical" href="https://weekly.massagelab-yeouido.xyz/blog-2.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="비교 분석 — 유흥 이용 주의사항 업종별 투명성 검증">
+    <meta property="og:description" content="유흥 이용 주의사항 정보를 투명하게 공개합니다. 서울 지역을 중심으로 셔츠룸, 룸싸롱, 마사지, 가라오케 등 12개 주요 업종의 예약 방식, 위생 상태, 가격 투명성 체크리스트를 철저히 비교 분석하여 올바른 소비 기준을 제시합니다.">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --bg-primary: #0a0b0d;
+            --bg-secondary: #14161a;
+            --bg-tertiary: #1f2229;
+            --accent-color: #ff3e3e;
+            --accent-green: #00ff66;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a5b1;
+            --text-muted: #626773;
+            --border-color: #2d3139;
+            --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+
+        /* Base Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            letter-spacing: -0.03em;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .m-ico-bhgp-text {
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Layout Container */
+        .q-head-3jc1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(10, 11, 13, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .q-foot-3ns2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo span {
+            background: var(--accent-color);
+            color: var(--bg-primary);
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            border-radius: 3px;
+        }
+        .t-btn-ybi1-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .t-btn-ybi1-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+        .t-btn-ybi1-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .t-btn-ybi1-links a:hover,
+        .t-btn-ybi1-links a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section - Bold & Edgy */
+        .hero-section {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1f1212 0%, var(--bg-primary) 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .hero-section h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            letter-spacing: -0.04em;
+        }
+        .hero-section h1 span {
+            color: var(--accent-color);
+        }
+        .hero-section p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Transparent Ledger Section */
+        .ledger-section {
+            padding: 80px 0;
+        }
+        .section-header {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-header h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background-color: var(--accent-color);
+        }
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        /* Ledger Table / Matrix */
+        .ledger-wrapper {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 50px;
+        }
+        .ledger-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 800px;
+        }
+        .ledger-table th,
+        .ledger-table td {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .ledger-table th {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+        .ledger-table tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+        .badge-risk {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .risk-high {
+            background-color: rgba(255, 62, 62, 0.15);
+            color: var(--accent-color);
+            border: 1px solid rgba(255, 62, 62, 0.3);
+        }
+        .risk-medium {
+            background-color: rgba(255, 165, 0, 0.15);
+            color: #ffa500;
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+        .risk-low {
+            background-color: rgba(0, 255, 102, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+        }
+
+        /* Comparison Cards Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .comp-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            position: relative;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .comp-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+        .comp-card::before {
+            content: "CRITICAL";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 0.65rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 2px 6px;
+            letter-spacing: 0.05em;
+        }
+        .comp-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            padding-right: 60px;
+        }
+        .comp-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .comp-checklist {
+            list-style: none;
+        }
+        .comp-checklist li {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .comp-checklist li::before {
+            content: "✕";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        .comp-checklist li.pass::before {
+            content: "✓";
+            color: var(--accent-green);
+        }
+
+        /* Warning Banner */
+        .warning-banner {
+            background-color: #1f1212;
+            border-left: 4px solid var(--accent-color);
+            padding: 25px;
+            border-radius: 4px;
+            margin-bottom: 80px;
+        }
+        .warning-banner h4 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .warning-banner p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Accordion Section */
+        .faq-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+        .faq-question {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: "+";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+        }
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0 30px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-info {
+            max-width: 400px;
+        }
+        .footer-info p {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+        .footer-col h5 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover {
+            color: var(--text-primary);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .t-btn-ybi1-links {
+                display: none;
+            }
+            .hamburger-menu {
+                display: block;
+            }
+            .hero-section {
+                padding: 60px 0 40px;
+            }
+            .ledger-table th,
+            .ledger-table td {
+                padding: 12px 16px;
+                font-size: 0.85rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+  <meta property="og:url" content="https://weekly.massagelab-yeouido.xyz/blog-2.html">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="q-head-3jc1 q-foot-3ns2">
+            <a href="/" class="logo">
+                유흥이용주의사항 <span>VERIFIED</span>
+            </a>
+            <nav class="t-btn-ybi1-wrapper">
+                <ul class="t-btn-ybi1-links">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/guide">업종별 가이드</a></li>
+                    <li><a href="/compare" class="active">비교/검증</a></li>
+                    <li><a href="/checklist">체크리스트</a></li>
+                </ul>
+                <button class="hamburger-menu" aria-label="메뉴 열기">
+                    <span class="q-ico-2i7f">☰</span>
+                </button>
+            <a href="posts.html">글 목록</a></nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="q-head-3jc1">
+            <span class="hero-badge">TRANSPARENT LEDGER</span>
+            <h1>불투명한 유흥 시장,<br><span>장부를 투명하게</span> 비교하다</h1>
+            <p>
+                예약 사기, 위생 상태 불량, 불투명한 추가금 청구까지. 서울 지역 주요 업종의 실제 운영 구조를 철저히 해부하여 올바른 소비 기준을 제시합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content: Comparison Matrix -->
+    <main class="q-head-3jc1 ledger-section">
+        
+        <div class="section-header">
+            <span class="m-ico-bhgp-text">MATRIX</span>
+            <h2>주요 업종별 투명성 지표 비교</h2>
+            <p>서울 내 12개 주요 업종 중 대표 카테고리의 구조적 리스크 분석 결과입니다.</p>
+        </div>
+
+        <!-- Ledger Table -->
+        <div class="ledger-wrapper">
+            <table class="ledger-table">
+                <thead>
+                    <tr>
+                        <th>업종 구분</th>
+                        <th>예약 방식 투명성</th>
+                        <th>위생 관리 수준</th>
+                        <th>가격 정찰제 여부</th>
+                        <th>위험 요소 (사기/바가지)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>셔츠룸</strong></td>
+                        <td><span class="badge-risk risk-medium">유선 예약 위주</span></td>
+                        <td><span class="badge-risk risk-medium">보통</span></td>
+                        <td><span class="badge-risk risk-high">미흡 (추가금 발생 빈번)</span></td>
+                        <td><span class="badge-risk risk-high">T/C 장난 및 음료 강매</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>룸싸롱</strong></td>
+                        <td><span class="badge-risk risk-high">폐쇄적 회원제</span></td>
+                        <td><span class="badge-risk risk-medium">보통</span></td>
+                        <td><span class="badge-risk risk-high">불투명 (정가 미고지)</span></td>
+                        <td><span class="badge-risk risk-high">바가지 청구, 사전 조율 필수</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>마사지</strong></td>
+                        <td><span class="badge-risk risk-low">플랫폼 예약 활성화</span></td>
+                        <td><span class="badge-risk risk-high">지점별 편차 극심</span></td>
+                        <td><span class="badge-risk risk-low">비교적 투명 (정찰제)</span></td>
+                        <td><span class="badge-risk risk-medium">선입금 사기 사이트 주의</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>가라오케</strong></td>
+                        <td><span class="badge-risk risk-low">오픈형 예약</span></td>
+                        <td><span class="badge-risk risk-low">우수</span></td>
+                        <td><span class="badge-risk risk-medium">중간 (기본 주류 세트)</span></td>
+                        <td><span class="badge-risk risk-medium">시간 초과당 추가 비용</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Warning Banner -->
+        <div class="warning-banner">
+            <h4>⚠️ 예약 전 필수 경고 사항</h4>
+            <p>
+                인터넷 광고의 '최저가 보장' 문구에 현혹되지 마십시오. 대부분의 피해는 공식 가격표가 없거나 구두로 조율된 가격에서 발생합니다. 반드시 예약 확정 전에 추가 요금(봉사료, 세금, 웨이터 팁 등)이 포함된 최종 견적을 텍스트 기록으로 남겨두셔야 안전합니다.
+            </p>
+        </div>
+
+        <!-- Alternative & Risk Analysis Cards -->
+        <div class="section-header">
+            <span class="m-ico-bhgp-text">DEEP DIVE</span>
+            <h2>업종별 주요 리스크 및 대안 분석</h2>
+            <p>겉으로 드러나지 않는 운영상의 함정과 이를 피하기 위한 실질적인 대안입니다.</p>
+        </div>
+
+        <div class="comparison-grid">
+            <!-- Card 1 -->
+            <div class="comp-card">
+                <h3>셔츠룸 / 가라오케 주의사항</h3>
+                <p>단시간 고수익 구조를 취하는 업종 특성상 시간 관리와 부대비용 청구에서 가장 많은 마찰이 발생합니다.</p>
+                <ul class="comp-checklist">
+                    <li>입장 시간과 퇴장 시간의 불명확한 기록 방식</li>
+                    <li>기본 세트 외 음료/안주 무단 추가 유도</li>
+                    <li class="pass">대안: 시작 전 타이머 설정 및 중간 빌지 확인 요청</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="comp-card">
+                <h3>룸싸롱 예약의 함정</h3>
+                <p>소위 '구좌'로 불리는 담당자 개인 영업 방식이 주를 이루어 가격 통제가 전혀 되지 않는 고위험 카테고리입니다.</p>
+                <ul class="comp-checklist">
+                    <li>담당자에 따른 고무줄 가격 책정</li>
+                    <li>양주 브랜드 바꿔치기 및 병수 부풀리기</li>
+                    <li class="pass">대안: 확실한 정찰제를 표방하는 브랜드형 업소 이용</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="comp-card">
+                <h3>마사지 위생 및 예약 사기</h3>
+                <p>타 업종 대비 진입장벽이 낮아 무허가 불법 위생 업소가 난립하며, 최근 선입금 먹튀 사기가 가장 기승을 부립니다.</p>
+                <ul class="comp-checklist">
+                    <li>일회용 소모품 재사용 및 관리실 환기 미흡</li>
+                    <li>예약금 명목의 선입금 유도 후 잠적</li>
+                    <li class="pass">대안: 현장 결제 원칙 준수 및 사전 위생 후기 검증</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="q-head-3jc1">
+            <div class="section-header" style="text-align: center;">
+                <span class="m-ico-bhgp-text">FAQ</span>
+                <h2>자주 묻는 질문 (FAQ)</h2>
+                <p>유흥 이용 전 가장 자주 발생하는 분쟁과 예방법에 대한 답변입니다.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">Q1. 선입금을 요구하는 예약 방식은 무조건 사기인가요?</div>
+                    <div class="faq-answer">
+                        A1. 그렇습니다. 정상적인 업소는 노쇼 방지용 소액 보증금 외에 전체 이용 금액의 선입금을 절대 요구하지 않습니다. 특히 첫 이용 고객에게 전액 선입금을 요구하는 곳은 99% 사기 사이트이므로 즉시 거래를 중단해야 합니다.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q2. 가격 덤터기를 썼을 때 법적인 구제를 받을 수 있나요?</div>
+                    <div class="faq-answer">
+                        A2. 사전에 약정되지 않은 부당 청구의 경우 영수증 및 결제 내역을 바탕으로 소비자원이나 경찰에 신고할 수 있습니다. 단, 구두 계약은 증명이 어려우므로 반드시 예약 문자나 녹취 등 객관적인 가격 합의 증거를 확보해 두어야 합니다.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q3. 업소 위생 상태를 이용 전에 미리 파악할 방법이 있나요?</div>
+                    <div class="faq-answer">
+                        A3. 대형 예약 플랫폼 내의 실제 이용객 리뷰 중 '시설 상태' 점수를 모니터링하는 것이 좋습니다. 또한 소독 증명서 부착 여부나 일회용 커버 사용 여부를 현장에서 먼저 확인한 후 이용 여부를 결정하는 것이 안전합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="q-head-3jc1">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h5 style="color: var(--text-primary); font-weight: 900;">유흥이용주의사항</h5>
+                    <p>본 플랫폼은 투명하고 안전한 소비 문화를 지향하며, 업종별 객관적 비교 데이터와 리스크 정보를 투명하게 공개하여 부당한 피해를 예방하고자 합니다.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>업종별 정보</h5>
+                        <ul>
+                            <li><a href="#">셔츠룸 가이드</a></li>
+                            <li><a href="#">룸싸롱 예약 팁</a></li>
+                            <li><a href="#">가라오케 체크리스트</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>고객 지원</h5>
+                        <ul>
+                            <li><a href="#">피해 신고 센터</a></li>
+                            <li><a href="#">투명성 검증 요청</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 유흥이용주의사항. All Rights Reserved. 본 사이트는 불법 업소 광고를 배제하고 투명 정보만을 제공합니다.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

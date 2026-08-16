@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개 | 유흥 이용 주의사항 — 올바른 선택을 위한 업종별 투명성 검증 가이드</title>
+    <meta name="description" content="유흥 이용 주의사항 정보를 투명하게 공개하는 검증 블로그의 운영 철학과 목적을 소개합니다. 음성적 관행을 정면으로 비판하며, 소비자가 반드시 알아야 할 12개 업종의 예약 방식, 위생 상태, 가격 투명성 검증 기준을 제시합니다.">
+    <meta name="keywords" content="유흥 이용 주의사항, 셔츠룸 주의사항, 룸싸롱 예약, 마사지 위생, 가라오케 가격">
+    <link rel="canonical" href="https://weekly.massagelab-yeouido.xyz/about.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="소개 | 유흥 이용 주의사항 — 올바른 선택을 위한 업종별 투명성 검증 가이드">
+    <meta property="og:description" content="유흥 이용 주의사항 정보를 투명하게 공개하는 검증 블로그의 운영 철학과 목적을 소개합니다. 음성적 관행을 정면으로 비판하며, 소비자가 반드시 알아야 할 12개 업종의 예약 방식, 위생 상태, 가격 투명성 검증 기준을 제시합니다.">
+    
+    <style>
+        /* CSS Variables & Design System */
+        :root {
+            --bg-primary: #0A0A0C;
+            --bg-secondary: #121215;
+            --bg-tertiary: #1A1A1E;
+            --accent: #CCFF00; /* Toxic neon yellow/green for Transparent Ledger concept */
+            --accent-hover: #b3df00;
+            --text-main: #FFFFFF;
+            --text-muted: #8E8E93;
+            --border-color: #2C2C30;
+            --border-heavy: #CCFF00;
+            --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+        .m-ico-bhgp-text {
+            font-family: var(--font-sans);
+            font-weight: 900;
+            font-size: 1.25rem;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header & Navigation */
+        .q-head-3jc1 {
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(10, 10, 12, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+        .q-head-3jc1 .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .t-btn-ybi1-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .t-btn-ybi1-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .t-btn-ybi1-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .t-btn-ybi1-links a:hover,
+        .t-btn-ybi1-links a.active {
+            color: var(--accent);
+        }
+
+        /* Mobile Hamburger Menu */
+        .q-ico-2i7f {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+        .q-ico-2i7f span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-main);
+            position: absolute;
+            left: 0;
+            transition: var(--transition);
+        }
+        .q-ico-2i7f span:nth-child(1) { top: 6px; }
+        .q-ico-2i7f span:nth-child(2) { top: 14px; }
+        .q-ico-2i7f span:nth-child(3) { top: 22px; }
+
+        .q-ico-2i7f.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .q-ico-2i7f.open span:nth-child(2) { opacity: 0; }
+        .q-ico-2i7f.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        /* Hero Section - Edgy Brutalist Tone */
+        .hero-section {
+            padding: 8rem 0 5rem 0;
+            border-bottom: 2px solid var(--border-heavy);
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+        }
+        .hero-section::before {
+            content: "LEDGER";
+            position: absolute;
+            right: -5%;
+            bottom: -5%;
+            font-size: 15vw;
+            font-weight: 900;
+            color: rgba(204, 255, 0, 0.02);
+            pointer-events: none;
+            line-height: 1;
+        }
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .hero-title span {
+            color: var(--accent);
+            display: block;
+        }
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        /* Ledger Style Content Block */
+        .ledger-block {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .ledger-header {
+            position: sticky;
+            top: 100px;
+        }
+        .ledger-tag {
+            background-color: var(--accent);
+            color: var(--bg-primary);
+            font-size: 0.8rem;
+            font-weight: 900;
+            padding: 0.25rem 0.5rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .ledger-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .ledger-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .ledger-content strong {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Manifesto Grid */
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .manifesto-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            transition: var(--transition);
+        }
+        .manifesto-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        .manifesto-num {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .manifesto-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .manifesto-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Verification Protocol Table */
+        .protocol-section {
+            padding: 6rem 0;
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .protocol-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 3rem;
+            text-align: left;
+        }
+        .protocol-table th {
+            border-bottom: 2px solid var(--border-heavy);
+            padding: 1.5rem 1rem;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .protocol-table td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 1rem;
+            font-size: 1rem;
+            vertical-align: top;
+        }
+        .protocol-table tr:hover td {
+            background-color: rgba(204, 255, 0, 0.02);
+        }
+        .protocol-badge {
+            display: inline-block;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            padding: 0.15rem 0.4rem;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        .q-foot-3ns2 {
+            border-top: 2px solid var(--border-heavy);
+            background-color: var(--bg-primary);
+            padding: 4rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .q-foot-3ns2-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+        .q-foot-3ns2-brand p {
+            margin-top: 1rem;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+        .q-foot-3ns2-links h5 {
+            color: var(--text-main);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .q-foot-3ns2-links ul {
+            list-style: none;
+        }
+        .q-foot-3ns2-links ul li {
+            margin-bottom: 0.75rem;
+        }
+        .q-foot-3ns2-links ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .q-foot-3ns2-links ul li a:hover {
+            color: var(--accent);
+        }
+        .q-foot-3ns2-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Responsive-768 */
+        @media (max-width: 768px) {
+            .q-ico-2i7f {
+                display: block;
+            }
+            .t-btn-ybi1-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-secondary);
+                border-bottom: 1px solid var(--border-color);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+            .t-btn-ybi1-links.open {
+                display: flex;
+            }
+            .grid-2col {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .ledger-header {
+                position: relative;
+                top: 0;
+            }
+            .manifesto-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .q-foot-3ns2-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .q-foot-3ns2-bottom {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            .protocol-table th, .protocol-table td {
+                padding: 1rem 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+  <meta property="og:url" content="https://weekly.massagelab-yeouido.xyz/about.html">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="q-head-3jc1">
+        <div class="container">
+            <a href="/" class="m-ico-bhgp-text">
+                LEDGER LAB
+            </a>
+            <nav class="t-btn-ybi1-wrapper">
+                <ul class="t-btn-ybi1-links" id="nav-links">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about" class="active">소개</a></li>
+                    <li><a href="/warnings">주의사항</a></li>
+                    <li><a href="/guide">업종별 가이드</a></li>
+                </ul>
+                <button class="q-ico-2i7f" id="menu-toggle" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            <a href="posts.html">글 목록</a></nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <span class="ledger-tag">Our Identity & Mission</span>
+            <h1 class="hero-title">
+                유흥 시장의 불투명한 장부를<br>
+                <span>정면으로 폭로하다.</span>
+            </h1>
+            <p class="hero-desc">
+                정보의 비대칭성은 기만적인 영업과 불합리한 비용 지출로 이어집니다. 우리는 서울 지역을 중심으로 셔츠룸, 룸싸롱, 마사지, 가라오케 등 12개 주요 업종의 실태를 철저히 해체하여 소비자가 주도하는 투명한 소비 기준을 제시합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Philosophy / Direct Address Section -->
+    <section class="ledger-block">
+        <div class="container">
+            <div class="grid-2col">
+                <div class="ledger-header">
+                    <span class="ledger-tag">The Philosophy</span>
+                    <h2 class="ledger-title">우리가 타협하지 않는 이유</h2>
+                </div>
+                <div class="ledger-content">
+                    <p>
+                        기존의 수많은 플랫폼과 정보 채널들은 제휴 수수료와 이권 개입으로 인해 시장의 진짜 모습을 감추기에 급급했습니다. 과장된 홍보, 예약 시점에 달라지는 고무줄 요금표, 위생 기준의 부재는 고스란히 소비자의 피해로 환원됩니다.
+                    </p>
+                    <p>
+                        <strong>"당신이 지불하는 금액은 정말 정당한가?"</strong> 이 단 하나의 질문에서 우리는 시작되었습니다. 우리는 업계의 눈치를 보지 않으며, 오직 객관적 검증 지표에 의해서만 움직입니다.
+                    </p>
+                    <p>
+                        본 블로그는 광고성 가짜 후기와 평점을 배제하고, 예약 과정의 투명성, 실제 위생 관리 실태, 숨겨진 추가 비용 발생 가능성을 분석하여 철저한 '이용 주의사항' 가이드라인을 작성하는 것을 유일한 목표로 삼습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Pillars (Manifesto) -->
+    <section class="ledger-block" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <span class="ledger-tag">Three Pillars</span>
+            <h2 class="ledger-title" style="text-align: center; margin-bottom: 1rem;">정보 투명성을 위한 3대 원칙</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 4rem auto;">우리는 단순한 가십이나 주관적 경험을 배제하고, 오직 구조적인 검증 프레임워크에 기반한 정보만을 투명하게 등재합니다.</p>
+            
+            <div class="manifesto-grid">
+                <div class="manifesto-card">
+                    <div class="manifesto-num">01</div>
+                    <h3>가격 현실화 검증</h3>
+                    <p>사전 예약 단계에서 공지된 가격과 실제 현장 결제 금액의 불일치를 철저히 감시합니다. 세금, 봉사료, 음료 추가금 등 '숨겨진 조항'을 제거하는 지표를 구축합니다.</p>
+                </div>
+                <div class="manifesto-card">
+                    <div class="manifesto-num">02</div>
+                    <h3>위생 및 보건 표준</h3>
+                    <p>정기적인 소독 여부, 일회용품 재사용 금지 여부 등 소비자의 건강과 직접적으로 연결되는 위생 실태를 객관적인 항목별로 체크하여 투명하게 분석합니다.</p>
+                </div>
+                <div class="manifesto-card">
+                    <div class="manifesto-num">03</div>
+                    <h3>예약 시스템 무결성</h3>
+                    <p>미끼 상품으로 소비자를 유인한 뒤 업종을 변경하거나 가격을 변동시키는 기만 행위를 차단하기 위해, 실제 정식 예약 루트의 신뢰성을 철저히 대조합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verification Matrix Table -->
+    <section class="protocol-section">
+        <div class="container">
+            <span class="ledger-tag">Verification Protocol</span>
+            <h2 class="ledger-title">12개 업종 주요 검증 프레임워크</h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin-bottom: 2rem;">우리는 서울 지역 내 셔츠룸, 룸싸롱, 마사지, 가라오케 등을 포괄하는 12개 업종에 대해 일관된 기준으로 주의사항을 검토합니다.</p>
+            
+            <table class="protocol-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">검증 대상 영역</th>
+                        <th style="width: 50%;">주요 분석 항목 (주의사항 핵심)</th>
+                        <th style="width: 25%;">검증 목적</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>예약 및 결제 방식</strong></td>
+                        <td>사전 예약금 제도 유무, 카드/현금가 동일 여부, 환불 규정의 명확성 분석</td>
+                        <td><span class="protocol-badge">가격 투명성</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>위생 및 시설 관리</strong></td>
+                        <td>공간 내 환기 시스템, 침구 및 개인 위생용품 재사용 여부, 정기 소독 기록 여부</td>
+                        <td><span class="protocol-badge">위생 안정성</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>영업 형태의 적법성</strong></td>
+                        <td>허가 등급에 맞는 영업 방식 준수 여부, 변칙 영업 및 미끼 광고 패턴 분석</td>
+                        <td><span class="protocol-badge">이용자 보호</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Operator / Contact Professional Signal Section -->
+    <section class="ledger-block">
+        <div class="container">
+            <div class="grid-2col">
+                <div class="ledger-header">
+                    <span class="ledger-tag">The Authority</span>
+                    <h2 class="ledger-title">어두운 시장에<br>기준을 세우다</h2>
+                </div>
+                <div class="ledger-content">
+                    <p>
+                        유흥 이용 주의사항 정보 블로그는 단순한 리뷰 집계 사이트가 아닙니다. 시장 내에 만연한 정보 비대칭으로 인해 발생하는 소비자 불이익을 최소화하겠다는 명확한 목표 아래 운영되고 있습니다.
+                    </p>
+                    <p>
+                        우리는 검증된 사실에만 집중하며, 특정 업소를 옹호하거나 비방하는 무분별한 여론 생성에 동참하지 않습니다. 오직 소비자가 스스로 비교하고 올바른 결정을 내릴 수 있도록 투명한 장부를 제공하는 감시자 역할을 수행합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="q-foot-3ns2">
+        <div class="container">
+            <div class="q-foot-3ns2-grid">
+                <div class="q-foot-3ns2-brand">
+                    <div class="m-ico-bhgp-text">LEDGER LAB</div>
+                    <p>서울 내 유흥 이용 시 발생할 수 있는 부당한 대우와 불투명한 요금 체계를 방지하기 위해, 12개 업종의 예약 방식, 위생 상태, 가격 투명성 체크리스트를 철저히 비교 분석합니다.</p>
+                </div>
+                <div class="q-foot-3ns2-links">
+                    <h5>바로가기</h5>
+                    <ul>
+                        <li><a href="/">홈</a></li>
+                        <li><a href="/about">소개</a></li>
+                        <li><a href="/warnings">주의사항</a></li>
+                        <li><a href="/guide">업종별 가이드</a></li>
+                    </ul>
+                </div>
+                <div class="q-foot-3ns2-links">
+                    <h5>주의사항 카테고리</h5>
+                    <ul>
+                        <li>셔츠룸 주의사항</li>
+                        <li>룸싸롱 예약 요령</li>
+                        <li>가라오케 투명성 가이드</li>
+                        <li>마사지 위생 기준</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="q-foot-3ns2-bottom">
+                <p>&copy; 2024 LEDGER LAB. All rights reserved. 본 정보는 정보 제공을 목적으로 하며, 소비자의 신중한 판단을 권장합니다.</p>
+                <p>서울 유흥 이용 주의사항 검증 연구소</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hamburger Menu Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
